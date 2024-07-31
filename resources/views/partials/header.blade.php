@@ -1,5 +1,5 @@
 <header>
     <div class="container mx-auto">
-        <h1 class="text-2xl">FakeBooks</h1>
+        <h1 class="text-2xl">Ezekiel Cagas</h1>
     </div>
 </header>

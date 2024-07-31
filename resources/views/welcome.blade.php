@@ -1,44 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    @include('partials.header')
+@include('partials.header')
 
-    <div class="container mx-auto py-4">
-        @yield('content')
-    </div>
-
-    @include('partials.footer')
-
-    <h2 class="section font-bold">Book Lists</h2>
-    <table class="min-w-full">
-        <thead>
+<div class="container mx-auto p-8">
+    <table class="table-auto w-full font-serif text-sm text-left rtl:text-right">
+        <thead class="uppercase">
             <tr>
-                <th class="py-2 px-4 border">ID</th>
-                <th class="py-2 px-4 border">ISBN</th>
-                <th class="py-2 px-4 border">Title</th>
-                <th class="py-2 px-4 border">Author</th>
-                <th class="py-2 px-4 border">Description</th>
-                <th class="py-2 px-4 border">Date Published</th>
+                <th class="px-4 py-2 border ">ID</th>
+                <th class="px-4 py-2 border ">ISBN</th>
+                <th class="px-4 py-2 border ">Title</th>
+                <th class="px-4 py-2 border ">Author</th>
+                <th class="px-4 py-2 border ">Description</th>
+                <th class="px-4 py-2 border ">Date Published</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($books as $book)
-            <tr>
-                <td class="py-2 px-4 border">{{ $book->id }}</td>
-                <td class="py-2 px-4 border">{{ $book->isbn }}</td>
-                <td class="py-2 px-4 border">{{ $book->title }}</td>
-                <td class="py-2 px-4 border">{{ $book->author }}</td>
-                <td class="py-2 px-4 border">{{ $book->descriptin }}</td>
-                <td class="py-2 px-4 border">{{ $book->date_publish }}</td>
-            </tr>
+            @foreach ($books as $book)
+                <tr>
+                    <td class="px-4 py-2 border ">{{ $book->id }}</td>
+                    <td class="px-4 py-2 border ">{{ $book->isbn }}</td>
+                    <td class="px-4 py-2 border ">{{ $book->title }}</td>
+                    <td class="px-4 py-2 border ">{{ $book->author }}</td>
+                    <td class="px-4 py-2 border ">{{ $book->description }}</td>
+                    <td class="px-4 py-2 border ">{{ $book->date_published }}</td>
+                </tr>
             @endforeach
         </tbody>
     </table>
-</body>
-</html>
+</div>
+
+
+@include('partials.footer')
